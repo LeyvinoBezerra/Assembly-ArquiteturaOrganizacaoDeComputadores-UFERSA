@@ -1,0 +1,27 @@
+#Quest�o 2 letra B
+.data
+	f: .word 0
+	g: .word 10
+	#b: .word 5, 4, 3, 2, 1
+	a: .word 1, 2, 3, 4, 5 	# vetor inicializado
+	 b: .word 0:10		# vetor de 10 posi��es zeradas
+	
+.text
+	la $s7, b		# end. b
+	la $s6, a		# end. a
+	
+	lw $t0, 16($s7)		# valor b[4]
+	sll $t1, $t0, 2		# indice multiplicado por 4
+	
+	add $t2, $s6, $t1	# end. a[b[4]]
+	lw $t3, 0($t2)		# valor a[b[4]]	
+	
+	la $t4, g		# end. g
+	lw $s1, 0($t4)	# valor de g
+	
+	sub $s0, $s1, $t3	# g - a[b[4]]
+	
+	la $t5, f
+	sw $s0, 0($t5)		# f = g - a[b[4]]
+	
+	
