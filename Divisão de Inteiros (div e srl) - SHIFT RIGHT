@@ -3,7 +3,7 @@
 	 li $t0, 32
 	 li $t1, 5
 	 
-	 srl $s2, $t0, 2
+	 srl $s2, $t1, 2
 	 
 	 div  $t0,  $t1
 	 
