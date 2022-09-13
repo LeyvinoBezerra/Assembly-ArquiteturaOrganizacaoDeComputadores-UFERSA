@@ -22,7 +22,6 @@
 	syscall
 	
 	#impressao de nome
-	#impressao da pergunta
 	li $v0, 4
 	la $a0, nome
 	syscall
