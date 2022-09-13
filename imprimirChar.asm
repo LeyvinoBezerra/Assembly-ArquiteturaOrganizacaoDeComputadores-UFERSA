@@ -1,7 +1,14 @@
-.data
-
-      	caractere: .byte 'A' #caractere a ser impresso
 .text
-	li $v0, 4 #imprimir char ou string
-	la $a0, caractere
-	syscall
+
+	 li $t0, 32
+	 li $t1, 5
+	 
+	 srl $s2, $t1, 2
+	 
+	 div  $t0,  $t1
+	 
+	 #parte inteira em $s0
+	 mflo $s0
+	 
+	 #resto em $s1
+	 mfhi $s1
