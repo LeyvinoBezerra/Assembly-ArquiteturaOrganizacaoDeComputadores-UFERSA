@@ -1,7 +1,7 @@
 .text
 
 	 li $t0, 32
-	 li $t1, 5
+	 li $t1, 4
 	 
 	 srl $s2, $t1, 2
 	 
