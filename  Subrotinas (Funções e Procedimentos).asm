@@ -19,6 +19,7 @@
 		La $a0, msgPar
 		jal imprimeString
 		jal encerraPrograma
+		
 	#função que verefica se o número $a0 é ímpar
 	#retorna 1 se for ímpar
 	#retorna 0 se for par 
