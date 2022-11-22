@@ -1,0 +1,32 @@
+2: A,B,C
+
+
+
+5. MARQUE A OPÇÃO COM A SEQUENCIA DE INSTRUÇÕES EM QUE É FEITO UM TESTE SE UM INTEIRO É NEGATIVO.
+caso seja positivoo programa termina normalmente ,caso contrario termina9indicando codigo de erro 404. considere que inteiro
+já está armazenado em $s0. As instruções estão separada por "/".
+5:B
+.data 
+ 	int: .word 20
+.text 
+	li $v0, 5
+	lw $a0, int
+
+	move $t0, $a0
+	slt $t0, $s0, $zero 
+	beq  $t0, $zero, fim1
+	fim2: li $a0, 404  
+	li $v0, 17 
+ 	syscall
+ 	fim1: li $v0, 10 
+ 	syscall
+
+4.qual a expressão, na linguagem C, código assembly a seguir representa?
+suponhaque as variaveis f,g,h,i ej sejam atribuidas aos $s0, $s1, $s2, $s3, $s4, respctivamente .suponhaque o endereço
+de base dos arrays A e B estejam nos registradores $s6, $s7, repctivamente 
+sub $t0, $s3 ,$s4
+sll $t0, $t0, 2
+add $to, $t0, $s6
+LW $t1, 0($10)
+sw t1, 32($s7)
+4: D A{i-j} = B[8]
